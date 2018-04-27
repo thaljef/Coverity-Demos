@@ -1,0 +1,7 @@
+!!!rm -rf coverity
+!!!clear
+
+cat src/script.py
+cov-build%%% --dir=coverity%%% --fs-capture-search src%%% --no-command 
+cov-analyze%%% --dir=coverity --all --webapp-security
+cov-commit-defects%%% --dir=coverity%%% --host=localhost --user=demo --password=secret --stream=Example
