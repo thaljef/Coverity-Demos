@@ -4,5 +4,5 @@
 cat src/main/java/HelloWorld.java
 cat build.xml
 cov-build%%% --dir=coverity%%% ant clean compile
-cov-analyze%%% --dir=coverity
+cov-analyze%%% --dir=coverity --all
 cov-commit-defects%%% --dir=coverity%%% --host=localhost --user=demo --password=coverity --stream=demo
